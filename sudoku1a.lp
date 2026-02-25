@@ -15,9 +15,10 @@
 :- sudoku(X, Y, N), initial(A, B, C), X != A, Y = B, N = C.
 % achieved: exclude where the same values exist in different spots of the same column
 
-%:- sudoku(X, Y, N), sudoku(A, B, C), X = A, Y = B, N != C.
-
 :- sudoku(X, Y, N), sudoku(A, B, C), X = A, Y != B, N = C.
+% achieved: exclude where the same values exist in different spots of the same row
+
 :- sudoku(X, Y, N), sudoku(A, B, C), X != A, Y = B, N = C.
+% achieved: exclude where the same values exist in different spots of the same column
 
 #show sudoku/3.
