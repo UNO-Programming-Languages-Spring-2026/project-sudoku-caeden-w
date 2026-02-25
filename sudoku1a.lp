@@ -8,9 +8,9 @@
 
 % sudoku(X, Y, N) :- X = 1..4, Y = 1..4, N = 1..4.
 
-{ sudoku(1..4, 1..4, 1..4) } = 12.
+{ sudoku(1..4, 1..4, 1..4) } = 16.
 
-:- sudoku(X, Y, N), initial(A, B, C), X = A, Y = B.
+% :- sudoku(X, Y, N), initial(A, B, C), X = A, Y = B.
 
 :- sudoku(X, Y, N), initial(A, B, C), X = A, Y != B, N = C.
 :- sudoku(X, Y, N), initial(A, B, C), X != A, Y = B, N = C.
