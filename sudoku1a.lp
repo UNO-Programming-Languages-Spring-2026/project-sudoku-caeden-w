@@ -6,7 +6,9 @@
 
 % Your implementation please...
 
-{ sudoku(X, Y, N) } :- X = 1..4, Y = 1..4, N = 1..4.
+% sudoku(X, Y, N) :- X = 1..4, Y = 1..4, N = 1..4.
+
+{ sudoku(1..4, 1..4, 1..4) } = 12.
 
 :- sudoku(X, Y, N), initial(A, B, C), X = A, Y = B.
 
