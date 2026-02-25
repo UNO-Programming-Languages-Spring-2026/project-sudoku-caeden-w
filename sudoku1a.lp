@@ -6,14 +6,15 @@
 
 % Your implementation please...
 
-% sudoku(X, Y, N) :- X = 1..4, Y = 1..4, N = 1..4.
-
 { sudoku(1..4, 1..4, 1..4) } = 16.
 
-% :- sudoku(X, Y, N), initial(A, B, C), X = A, Y = B.
+% achieved: get all combinations of a 4x4 board
 
 :- sudoku(X, Y, N), initial(A, B, C), X = A, Y != B, N = C.
+% achieved: exclude where the same value exists in different spots of the same row
+
 :- sudoku(X, Y, N), initial(A, B, C), X != A, Y = B, N = C.
+% achieved: exclude where the same values exist in different spots of the same column
 
 :- sudoku(X, Y, N), sudoku(A, B, C), X = A, Y = B, N != C.
 
