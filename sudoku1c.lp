@@ -42,7 +42,7 @@ subgrid(4, 4, 4).
 :- sudoku(X, Y, N), sudoku(A, B, C), X != A, Y = B, N = C.
 % achieved: exclude where the same values exist in different spots of the same column
 
-:- subgrid(X, Y, G), G = 1..4, sudoku(A, B, N), sudoku(C, D, V), A = X, Y = B, A != C, B != D, N = V.
+:- subgrid(X, Y, G), G = 1..4, sudoku(A, B, N), subgrid(M, N, O), O = G, sudoku(C, D, V), C = M, N = D, A = X, Y = B, A != C, B != D, N = V.
 % achieved: exclude where a subgrid does not possess each of the numbers 1-4
 
 
