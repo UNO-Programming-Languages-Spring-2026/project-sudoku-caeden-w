@@ -6,8 +6,26 @@
 
 % Your implementation please...
 
-{ sudoku(1..4, 1..4, 1..4) } = 16.
 
+subgrid(1, 1, 1).
+subgrid(1, 2, 1).
+subgrid(2, 1, 1).
+subgrid(2, 2, 1).
+subgrid(1, 3, 2).
+subgrid(1, 4, 2).
+subgrid(2, 3, 2).
+subgrid(2, 4, 2).
+subgrid(3, 1, 3).
+subgrid(3, 2, 3).
+subgrid(4, 1, 3).
+subgrid(4, 2, 3).
+subgrid(3, 3, 4).
+subgrid(3, 4, 4).
+subgrid(4, 3, 4).
+subgrid(4, 4, 4).
+% achieved: facts required for question 1b
+
+{ sudoku(1..4, 1..4, 1..4) } = 16.
 % achieved: get all combinations of a 4x4 board
 
 :- sudoku(X, Y, N), initial(A, B, C), X = A, Y != B, N = C.
